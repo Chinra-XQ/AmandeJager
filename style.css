@@ -1,0 +1,105 @@
+<style>
+        /* ---------------------------------- */
+        /* 1. STYLES GÉNÉRAUX ET COULEURS DE BASE */
+        /* ---------------------------------- */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif; /* Remplacer plus tard par une police personnalisée */
+            background-color: #fcfbf9; /* Fond très clair, inspiré de l'exemple */
+            color: #333; /* Couleur du texte foncé */
+        }
+        
+        .container {
+            /* Le conteneur centralise le contenu et donne une marge autour */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---------------------------------- */
+        /* 2. BARRE DE NAVIGATION (MENU) */
+        /* ---------------------------------- */
+        .header-nav {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee; /* Ligne de séparation subtile */
+        }
+
+        .nav-list {
+            list-style: none;
+            text-align: right; /* Aligner le menu à droite comme sur l'exemple */
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-list li {
+            display: inline-block;
+            margin-left: 30px; /* Espace entre les liens */
+        }
+
+        .nav-list a {
+            color: #333; /* Texte des liens foncé */
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        
+        /* ---------------------------------- */
+        /* 3. SECTION PRINCIPALE (HERO) */
+        /* ---------------------------------- */
+        .hero-section {
+            display: flex; /* Active Flexbox */
+            align-items: center; /* Aligne verticalement au centre */
+            min-height: 80vh; /* Prend au moins 80% de la hauteur de l'écran */
+            padding-top: 50px;
+        }
+        
+        .hero-content {
+            flex: 1; /* Prend une partie de l'espace disponible */
+            padding-right: 50px;
+        }
+
+        .hero-image {
+            flex: 1; /* Prend une autre partie de l'espace disponible */
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .logo-text {
+            font-family: serif; /* Police de style pour le logo */
+            font-size: 4em;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid #333; /* Bouton encadré comme dans l'exemple */
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #333;
+            color: white;
+        }
+    </style>
