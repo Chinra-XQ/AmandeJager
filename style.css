@@ -1,105 +1,332 @@
-<style>
-        /* ---------------------------------- */
-        /* 1. STYLES GÉNÉRAUX ET COULEURS DE BASE */
-        /* ---------------------------------- */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif; /* Remplacer plus tard par une police personnalisée */
-            background-color: #fcfbf9; /* Fond très clair, inspiré de l'exemple */
-            color: #333; /* Couleur du texte foncé */
-        }
-        
-        .container {
-            /* Le conteneur centralise le contenu et donne une marge autour */
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+/* ---------------------------------- */
+/* 1. STYLES GÉNÉRAUX ET COULEURS DE BASE */
+/* ---------------------------------- */
+body, html {
+    margin: 0;
+    padding: 0;
+    /* Police pour le corps de texte */
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfbf9; /* Fond très clair */
+    color: #333; /* Texte foncé */
+    line-height: 1.6; /* Améliore la lisibilité */
+}
 
-        /* ---------------------------------- */
-        /* 2. BARRE DE NAVIGATION (MENU) */
-        /* ---------------------------------- */
-        .header-nav {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee; /* Ligne de séparation subtile */
-        }
+.container {
+    /* Le conteneur centralise le contenu et donne une marge autour */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        .nav-list {
-            list-style: none;
-            text-align: right; /* Aligner le menu à droite comme sur l'exemple */
-            padding: 0;
-            margin: 0;
-        }
+/* ---------------------------------- */
+/* 2. BARRE DE NAVIGATION (MENU) */
+/* ---------------------------------- */
+.header-nav {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee; /* Ligne de séparation subtile */
+}
 
-        .nav-list li {
-            display: inline-block;
-            margin-left: 30px; /* Espace entre les liens */
-        }
+.nav-list {
+    list-style: none;
+    text-align: right; /* Aligner le menu à droite */
+    padding: 0;
+    margin: 0;
+}
 
-        .nav-list a {
-            color: #333; /* Texte des liens foncé */
-            text-decoration: none;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-        
-        /* ---------------------------------- */
-        /* 3. SECTION PRINCIPALE (HERO) */
-        /* ---------------------------------- */
-        .hero-section {
-            display: flex; /* Active Flexbox */
-            align-items: center; /* Aligne verticalement au centre */
-            min-height: 80vh; /* Prend au moins 80% de la hauteur de l'écran */
-            padding-top: 50px;
-        }
-        
-        .hero-content {
-            flex: 1; /* Prend une partie de l'espace disponible */
-            padding-right: 50px;
-        }
+.nav-list li {
+    display: inline-block;
+    margin-left: 30px; 
+}
 
-        .hero-image {
-            flex: 1; /* Prend une autre partie de l'espace disponible */
-        }
-        
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+.nav-list a {
+    color: #333; 
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
 
-        .logo-text {
-            font-family: serif; /* Police de style pour le logo */
-            font-size: 4em;
-            line-height: 1;
-            margin-bottom: 20px;
-        }
+.nav-list a:hover {
+    color: #a0a0a0; /* Légère modification au survol */
+}
 
-        .tagline {
-            font-size: 1.5em;
-            font-weight: 300;
-            margin-bottom: 20px;
-        }
+/* ---------------------------------- */
+/* 3. SECTION PRINCIPALE (HERO) */
+/* ---------------------------------- */
+.hero-section {
+    display: flex; 
+    align-items: center; 
+    min-height: 80vh; 
+    padding-top: 50px;
+}
 
-        .description {
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
+.hero-content {
+    flex: 1; 
+    padding-right: 50px;
+}
 
-        .contact-button {
-            display: inline-block;
-            padding: 12px 30px;
-            border: 2px solid #333; /* Bouton encadré comme dans l'exemple */
-            color: #333;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
+.hero-image {
+    flex: 1; 
+}
 
-        .contact-button:hover {
-            background-color: #333;
-            color: white;
-        }
-    </style>
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style du logo/titre */
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5em; 
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Style du bouton "CONTACTEZ-MOI" */
+.contact-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #333; 
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* ---------------------------------- */
+/* 4. PIED DE PAGE (FOOTER) */
+/* ---------------------------------- */
+footer {
+    border-top: 1px solid #eee;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 50px; /* Espace au-dessus du footer */
+}
+
+
+/* ---------------------------------- */
+/* 5. RÉACTIVITÉ (Mobile) */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+    /* Sur mobile, la navigation devient centrée */
+    .nav-list {
+        text-align: center;
+    }
+    .nav-list li {
+        margin: 0 15px;
+    }
+
+    /* Sur mobile, la section hero s'empile verticalement */
+    .hero-section {
+        flex-direction: column; 
+        text-align: center;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+    
+    .logo-text {
+        font-size: 3em; 
+    }
+    
+    .tagline {
+        font-size: 1.2em;
+    }
+}
+/* ---------------------------------- */
+/* 6. STYLE SPÉCIFIQUE AU PORTFOLIO */
+/* ---------------------------------- */
+
+.page-header {
+    text-align: center;
+    padding-top: 100px; /* Espace après le menu */
+    padding-bottom: 50px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* GRILLE PRINCIPALE (Utilisation de CSS Grid pour la mise en page) */
+.portfolio-grid {
+    display: grid;
+    /* Crée 3 colonnes de largeur égale */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Espace entre les images */
+    padding-bottom: 50px;
+}
+
+.grid-item {
+    overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas */
+    border-radius: 2px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.grid-item img:hover {
+    transform: scale(1.05); /* Zoom subtil au survol */
+}
+
+/* ---------------------------------- */
+/* 7. RÉACTIVITÉ POUR LA GRILLE */
+/* ---------------------------------- */
+@media (max-width: 992px) {
+    .portfolio-grid {
+        /* Passe à 2 colonnes sur les tablettes */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid {
+        /* Passe à 1 seule colonne sur les petits mobiles */
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header {
+        padding-top: 70px;
+    }
+}
+/* ---------------------------------- */
+/* 8. STYLE SPÉCIFIQUE AU FORMULAIRE */
+/* ---------------------------------- */
+.contact-form-section {
+    max-width: 600px; /* Limiter la largeur du formulaire pour la lisibilité */
+    margin: 0 auto 80px auto;
+    padding: 20px;
+    border: 1px solid #eee; /* Cadre léger */
+    border-radius: 4px;
+    background-color: white;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Inclut le padding et border dans la largeur totale */
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permet uniquement le redimensionnement vertical */
+}
+
+/* Style pour le bouton d'envoi */
+.submit-button {
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+/* ---------------------------------- */
+/* 9. STYLE SPÉCIFIQUE AUX VIDÉOS */
+/* ---------------------------------- */
+
+/* Grille pour afficher les vidéos */
+.video-grid {
+    display: grid;
+    /* 2 colonnes par défaut */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+/* Conteneur principal pour la vidéo (clé de la réactivité) */
+.video-container {
+    position: relative;
+    width: 100%;
+    /* Utilise le padding-top pour maintenir un ratio 16:9 (315/560 * 100 = 56.25%) */
+    padding-top: 56.25%; 
+    height: 0;
+    overflow: hidden;
+}
+
+/* La balise iframe prend 100% de l'espace du conteneur */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-title {
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #555;
+}
+
+/* ---------------------------------- */
+/* 10. RÉACTIVITÉ POUR LES VIDÉOS */
+/* ---------------------------------- */
+@media (max-width: 900px) {
+    .video-grid {
+        /* Passe à 1 colonne sur les tablettes et mobiles */
+        grid-template-columns: 1fr;
+    }
+}
